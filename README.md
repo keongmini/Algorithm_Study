@@ -9,7 +9,8 @@
 |21.12.30|백준 1158, 9093, 9012|❌|
 |22.01.05|백준 10828, 10845, 10866|✅|
 |22.01.11|백준 1158, 9093, 9012|✅|
-|22.01.12|[프로그래머스_다리를지나는트럭](https://programmers.co.kr/learn/courses/30/lessons/42583), [프로그래머스_프린터큐](https://programmers.co.kr/learn/courses/30/lessons/42587)||
-|22.01.14|백준 1966, [프로그래머스_주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)||
+|22.01.12|[프로그래머스_다리를지나는트럭](https://programmers.co.kr/learn/courses/30/lessons/42583), [프로그래머스_프린터큐](https://programmers.co.kr/learn/courses/30/lessons/42587)|❌|
+|22.01.14|[프로그래머스_다리를지나는트럭](https://programmers.co.kr/learn/courses/30/lessons/42583), [프로그래머스_프린터큐](https://programmers.co.kr/learn/courses/30/lessons/42587)|✅|
+|22.01.15|백준 1966, [프로그래머스_주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)||
 
 
