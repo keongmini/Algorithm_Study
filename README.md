@@ -11,6 +11,10 @@
 |22.01.11|백준 1158, 9093, 9012|✅|
 |22.01.12|[프로그래머스_다리를지나는트럭](https://programmers.co.kr/learn/courses/30/lessons/42583), [프로그래머스_프린터큐](https://programmers.co.kr/learn/courses/30/lessons/42587)|❌|
 |22.01.14|[프로그래머스_다리를지나는트럭](https://programmers.co.kr/learn/courses/30/lessons/42583), [프로그래머스_프린터큐](https://programmers.co.kr/learn/courses/30/lessons/42587)|✅|
-|22.01.15|백준 1966, [프로그래머스_주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)||
+|22.01.17|백준 1966, [프로그래머스_주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)|✅|
+|22.01.19|[프로그래머스_네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162), 백준 2606||
+|22.01.21|[프로그래머스 타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165), 백준 1697||
+|22.01.22|[프로그래머스 여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164), 백준 11279||
+|22.01.24|백준 11286, ||
 
 
