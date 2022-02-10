@@ -15,7 +15,7 @@
 |22.01.19|[프로그래머스_네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162), 백준 2606 (DFS)|✅|
 |22.02.07|[프로그래머스 타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)|❌|
 |22.02.08|leetcode 1|✅|
-|22.02.09|leetcode 42||
+|22.02.09|leetcode 42|✅|
 |22.02.10|leetcode 15||
 |22.02.11|leetcode 561||
 
