@@ -19,7 +19,9 @@
 |22.02.10|leetcode 15|✅|
 |22.02.11|leetcode 561|❌|
 |22.03.08|leetcode 561|✅|
-|22.03.09|leetcode 238, leetcode 121||
-|22.03.11|(연결리스트) leetcode 234||
+|22.03.09|leetcode 238, leetcode 121|❌|
+|22.03.15|leetcode 238|✅|
+|22.03.16|leetcode 121||
+|22.03.17|(연결리스트) leetcode 234||
 
 
