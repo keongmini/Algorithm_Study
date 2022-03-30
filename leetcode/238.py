@@ -56,7 +56,7 @@ class Solution(object):
             out.append(p)
             p = p * nums[i]
 
-        # 오른쪽 곱 
+        # 오른쪽 곱
         p = 1
         for i in range(len(nums)-1, -1, -1):
             out[i] = out[i] * p
