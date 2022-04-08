@@ -27,6 +27,7 @@
 |22.04.02|leetcode 2, 24|✅|
 |22.04.04|leetcode 328, 92|✅|
 |22.04.06|(스택) leetcode 20, 316|✅|
-|22.04.06|leetcode 739, (큐) leetcode 225||
+|22.04.08|leetcode 739, (큐) leetcode 225|✅|
+|22.04.11|leetcode 232, 622||
 
 
