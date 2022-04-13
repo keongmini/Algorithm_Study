@@ -57,3 +57,20 @@ class Solution(object):
 
 s = Solution()
 print(s.isPalindrome([1,2,2,1]))
+
+# Runner 기법(python3)
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        rev = None
+        slow = fast = head
+
+        while fast and fast.next:
+            fast = fast.next.next
+            rev, rev.next, slow = slow, rev, slow.next
+        if fast:
+            slow = slow.next
+
+        while rev and rev.val == slow.val:
+            slow, rev = slow.next, rev.next
+
+        return not rev
