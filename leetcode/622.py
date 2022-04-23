@@ -53,7 +53,7 @@ class MyCircularQueue(object):
                 return False
         return True
 
-# answer
+# answer1
 class MyCircularQueue(object):
     def __init__(self, k):
         self.q = [None for i in range(k)]
@@ -94,3 +94,38 @@ class MyCircularQueue(object):
 
     def isFull(self):
         return self.p1 == self.p2 and self.q[self.p1] is not None
+
+#answer2
+class MyCircularQueue:
+
+    def __init__(self, k: int):
+        self.q = [None for i in range(k)]
+        self.maxLen = k
+        self.frontIndex = 0
+        self.backIndex = 0
+
+    def enQueue(self, value: int) -> bool:
+        if self.isFull():
+            return False
+        self.q[self.backIndex] = value
+        self.backIndex = (self.backIndex + 1) % self.maxLen
+        return True
+
+    def deQueue(self) -> bool:
+        if self.isEmpty():
+            return False
+        self.q[self.frontIndex] = None
+        self.frontIndex = (self.frontIndex + 1) % self.maxLen
+        return True
+
+    def Front(self) -> int:
+        return -1 if self.isEmpty() else self.q[self.frontIndex]
+
+    def Rear(self) -> int:
+        return -1 if self.isEmpty() else self.q[self.backIndex - 1]
+
+    def isEmpty(self) -> bool:
+        return self.frontIndex == self.backIndex and self.q[self.frontIndex] == None
+
+    def isFull(self) -> bool:
+        return self.frontIndex == self.backIndex and self.q[self.frontIndex] != None
