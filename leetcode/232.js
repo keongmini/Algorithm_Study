@@ -15,7 +15,7 @@ MyQueue.prototype.pop = function() {
 
 MyQueue.prototype.peek = function() {
     if (!this.output.length){       // length없이 비교x
-        while(this.input.length){
+        while(this.input.length){       // length없이 비교x
             this.output.push(this.input.pop())
         }
     }
