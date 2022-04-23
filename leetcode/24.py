@@ -24,6 +24,7 @@ class Solution(object):
             b = head.next
             head.next = b.next
             b.next = head
+            # 자리 바꾸기 완료 (재연결)
 
             prev.next = b    # pair 자리 변경완료
 
