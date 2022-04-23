@@ -39,6 +39,8 @@ class Solution(object):
         if head and head.next:
             p = head.next
             head.next = self.swapPairs(p.next)
+            # p.next = 결국 head.next.next
+            # pair끼리 재귀를 돌면서 그 결과를 차례대로 return 하는 방식
             p.next = head
             return p
         return head
