@@ -31,7 +31,7 @@ word_list = []
 for word in words:
     word_list.append([len(word), word])
 
-word_list.sort()
+word_list.sort() # 앞자리 기준 정렬 후 뒷자리 기준 정렬 진행 
 
 for word in word_list:
     print(word[1])
