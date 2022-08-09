@@ -23,21 +23,13 @@ for card in mycard_list:
     if binary_search(card_list, card, 0, card_num-1):
         print('1', end=" ")
     else:
-<<<<<<< Updated upstream
         print('0', end=" ")
-=======
-        print('0', end=" ") 
 
->>>>>>> Stashed changes
 
 # 집합 자료형
 import sys
 card_num = int(input())
-<<<<<<< Updated upstream
-card_list = set(map(int, sys.stdin.readline().rstrip().split()))    # list로 할경우 에러 시간초과 발생
-=======
 card_list = set(map(int, sys.stdin.readline().rstrip().split()))    # set이 아닌 list로 할 경우 시간초과
->>>>>>> Stashed changes
 
 mycard_num = int(input())
 mycard_list = list(map(int, sys.stdin.readline().rstrip().split()))
@@ -48,8 +40,4 @@ for card in mycard_list:
     else:
         print('0', end=" ")
 
-<<<<<<< Updated upstream
 # 이진탐색보다 집합자료형 풀이가 훨씬 빠름
-=======
-# 집합자료형 풀이가 훨씬 빠름
->>>>>>> Stashed changes
