@@ -10,3 +10,5 @@ class Solution:
             (dist, x, y) = heapq.heappop(heap)
             result.append((x, y))
         return result
+
+# 힙 사용 하는 이유: 같은 거리를 갖는 경우 더 순서가 빠른(더 가까운) 값이 출력되어야 하기 때문에 
