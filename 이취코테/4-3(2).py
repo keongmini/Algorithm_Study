@@ -1,3 +1,4 @@
+# 풀이1
 input_data = input()
 row = int(input_data[1])
 column = int(ord(input_data[0])) - int(ord('a')) + 1
@@ -14,3 +15,19 @@ for step in steps:
         result += 1
 
 print(result)
+
+# 풀이2
+input_ = input()
+x, y = int(ord(input_[0]) - ord('a') + 1), int(input_[1])
+
+direction = [(2, 1), (2, -1), (-2, 1), (-2, -1), (1, 2), (-1, 2), (1, -2),(-1, -2)]
+
+cnt = 0
+for nx, ny in direction:
+    if x + nx < 1 or y + ny < 1:
+        continue
+    elif x + nx > 8 or y + ny > 8:
+        continue
+    cnt += 1
+
+print(cnt)
