@@ -33,3 +33,21 @@ for d in directions:
             i, j = ni, nj
 
 print(i, j)
+
+# 풀이 3
+n = int(input())
+order = input().split()
+
+x = y = 1
+nx = [0,0,1,-1]
+ny = [-1,1,0,0]
+direction = ['U', 'D', 'R', 'L']
+
+for o in order:
+    idx = direction.index(o)
+    if x + nx[idx] < 1 or y + ny[idx] < 1:
+        continue
+    x += nx[idx]
+    y += ny[idx]
+
+print(y, x)
