@@ -28,3 +28,24 @@ class Solution:
             return reverse(next, node)
 
         return reverse(head)
+
+
+# 반복문
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head:
+            return head
+
+        prev = head
+        root = head.next
+
+        prev.next = None
+
+        while root:
+            node = root.next
+            root.next = prev
+
+            prev = root
+            root = node
+
+        return prev
