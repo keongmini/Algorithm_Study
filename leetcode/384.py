@@ -1,4 +1,4 @@
-# random 메소드를 이용해야만 풀리는 문제인 것 같음 
+# random 메소드를 이용해야만 풀리는 문제인 것 같음
 class Solution:
 
     def __init__(self, nums: List[int]):
