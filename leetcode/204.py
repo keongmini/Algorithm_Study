@@ -1,3 +1,5 @@
+# 에라토스테네스의 채 
+# Sieve of Eratosthenes
 class Solution:
     def countPrimes(self, n: int) -> int:
         if n <= 2:
