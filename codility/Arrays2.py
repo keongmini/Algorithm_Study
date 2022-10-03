@@ -16,3 +16,5 @@ def solution(A):
     return now
 
 # 시간 복잡도 O(N) or O(N*log(N))
+
+# https://app.codility.com/demo/results/trainingPVNRJR-SPY/
