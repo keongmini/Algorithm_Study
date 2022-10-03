@@ -10,3 +10,5 @@ def solution(X, Y, D):
     return cnt
 
 # 시간 복잡도 O(1)
+
+# https://app.codility.com/demo/results/trainingX8U82Y-NNC/
