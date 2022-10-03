@@ -12,3 +12,5 @@ def solution(A, K):
     result = list(nums)
 
     return result
+
+# https://app.codility.com/demo/results/trainingVJRMYK-Q6N/
