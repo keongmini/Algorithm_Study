@@ -13,3 +13,5 @@ def solution(N):
         result = max(idx[i + 1] - idx[i], result)
 
     return result - 1
+
+# https://app.codility.com/demo/results/trainingCQ2CJJ-VHR/
