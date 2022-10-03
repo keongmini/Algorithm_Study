@@ -8,3 +8,5 @@ def solution(X, Y, D):
         cnt += 1
 
     return cnt
+
+# 시간 복잡도 O(1)
