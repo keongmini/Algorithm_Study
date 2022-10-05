@@ -87,3 +87,6 @@
 |22.09.29|프로그래머스 42747, 43105, 42895|✅|
 |22.10.01|프로그래머스 42891, 백준 1439|✅|
 |22.10.02|프로그래머스 60057, 백준 18352, 3190, 18406|✅|
+|22.10.03|코딜리티 Iterations, Arrays, Time Complexity|✅|
+|22.10.04|코딜리티 Time Complexity, Counting Elements, Prefix sums, Soring|✅|
+|22.10.05|코딜리티 Prefix sums, Soring, Stacks and Queues|✅|
