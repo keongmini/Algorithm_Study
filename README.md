@@ -90,3 +90,4 @@
 |22.10.03|코딜리티 Iterations, Arrays, Time Complexity|✅|
 |22.10.04|코딜리티 Time Complexity, Counting Elements, Prefix sums, Soring|✅|
 |22.10.05|코딜리티 Prefix sums, Soring, Stacks and Queues|✅|
+|22.10.06|코딜리티 Leader, Maximum slice problem, Prime and composite numbers, 백준 7576, 7562, 2667, 2178, 1260, 11724|✅|
