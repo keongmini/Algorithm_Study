@@ -44,7 +44,7 @@ def solution(N, P, Q):
 
     for i in prime:
         for j in prime:
-            if i * j > N:           # 안해주면 timeout error 발생 
+            if i * j > N:           # 안해주면 timeout error 발생
                 break
 
             if not semiprime[i * j]:
