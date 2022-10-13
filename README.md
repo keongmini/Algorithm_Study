@@ -91,3 +91,8 @@
 |22.10.04|코딜리티 Time Complexity, Counting Elements, Prefix sums, Soring|✅|
 |22.10.05|코딜리티 Prefix sums, Soring, Stacks and Queues|✅|
 |22.10.06|코딜리티 Leader, Maximum slice problem, Prime and composite numbers, 백준 7576, 7562, 2667, 2178, 1260, 11724|✅|
+|22.10.07|백준 9205|✅|
+|22.10.09|백준 2667|✅|
+|22.10.10|코딜리티 Sieve_of_Eratosthenes, Euclidean_algorithm|✅|
+|22.10.11|코딜리티 Caterpillar_method, Fibonacci_numbers, Greedy_algorithms|✅|
+|22.10.13|leetcode 929, 3, 2, 124|✅|
