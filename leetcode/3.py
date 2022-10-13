@@ -36,3 +36,22 @@ class Solution:
             used[char] = index
 
         return max_length
+
+# 다시 풀어봄
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        maxNum = 0
+        now = ''
+        set_now = set()
+        for char in s:
+            if set_now and char in set_now:
+                for i in range(len(now)):
+                    if now[i] == char:
+                        now = now[i + 1:]
+                        break
+            set_now.add(char)
+            now += char
+            maxNum = max(maxNum, len(now))
+
+        return maxNum
