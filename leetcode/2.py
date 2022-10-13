@@ -54,3 +54,37 @@ class Solution(object):
             head = head.next
 
         return root.next
+
+
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        answer = result = ListNode()
+        carry = 0
+        while l1 or l2:
+            result.next = ListNode(carry)
+            result = result.next
+
+            if l1 and not l2:
+                sumNum = l1.val + carry
+                l1 = l1.next
+
+            elif l2 and not l1:
+                sumNum = l2.val + carry
+                l2 = l2.next
+
+            else:
+                sumNum = l1.val + l2.val + carry
+                l1 = l1.next
+                l2 = l2.next
+
+            carry = sumNum // 10
+            now = sumNum % 10
+
+            result.val = now
+
+        if carry:
+            result.next = ListNode(carry)
+            result = result.next
+            result.val = carry
+
+        return answer.next
