@@ -81,7 +81,8 @@ def solution(S, P, Q):
                 break
     return result
 
-
+# 87%
+# set 보다 string 값에서 찾는 게 빠름
 def solution(S, P, Q):
     N = {
         "A": 1,
@@ -105,3 +106,41 @@ def solution(S, P, Q):
         result.append(num)
 
     return result
+
+# 통과
+def solution(S, P, Q):
+    A, C, G, T = 0, 0, 0, 0
+    now = [(0, 0, 0, 0)]
+    for s in S:
+        if s == 'A':
+            A += 1
+        elif s == 'C':
+            C += 1
+        elif s == 'G':
+            G += 1
+        elif s == 'T':
+            T += 1
+
+        now.append((A, C, G, T))        # char 순서대로 현재 갯수 모두 저장
+
+    dna = {'A': 1, 'C': 2, 'G': 3, 'T': 4}
+    result = []
+    for p, q in zip(P, Q):
+        nowP, nowQ = now[p], now[q + 1]     # 달라진 값 비교
+
+        if nowP[0] != nowQ[0]:
+            result.append(1)
+        elif nowP[1] != nowQ[1]:
+            result.append(2)
+        elif nowP[2] != nowQ[2]:
+            result.append(3)
+        elif nowP[3] != nowQ[3]:
+            result.append(4)
+        else:
+            result.append(dna[S[p]])
+
+    return result
+
+# 시간 복잡도 O(N + M)
+
+# https://app.codility.com/demo/results/trainingY8AGX4-X5V/
