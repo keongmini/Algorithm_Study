@@ -96,3 +96,6 @@
 |22.10.10|코딜리티 Sieve_of_Eratosthenes, Euclidean_algorithm|✅|
 |22.10.11|코딜리티 Caterpillar_method, Fibonacci_numbers, Greedy_algorithms|✅|
 |22.10.13|leetcode 929, 3, 2, 124|✅|
+|22.10.14||✅|
+|22.10.16||✅|
+|22.10.17||✅|
