@@ -33,7 +33,7 @@
   All the pairs [ai, bi] are distinct.
   ```
   
-* 문제 접근 방법
+* 문제 접근 방법  
   선수강과목(key)과 다음 과목(value)을 딕셔너리에 저장  
   가장 첫번째로 수강해야 하는 과목을 루트라고 생각하고 bfs를 돌면서 과목을 방문처리하면서 돌리려고 함  
   가장 첫번째 과목이 어떤 과목인지 찾는 과정 구현 x, 이미 방문처리가 되어 해당 과목과 연결되어있는 다른 과목 방문 불가 등의 문제로 구현 x  
@@ -72,6 +72,8 @@
   - 위상정렬 
     
     참고. [위상정렬](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Topological%20Sort.md)
+    
+    **시간복잡도 O(M + N)** M은 연결된 갯수, N은 과목수 
   
     ```python
     from collections import defaultdict, deque
