@@ -56,3 +56,80 @@ class Codec:
 # ser = Codec()
 # deser = Codec()
 # ans = deser.deserialize(ser.serialize(root))
+
+
+# bfs
+import collections
+class Codec:
+
+    def serialize(self, root):
+        if not root:
+            return ''
+
+        q = collections.deque()
+        q.append(root)
+        result = ''
+        while q:
+            node = q.popleft()
+            if not node:
+                result += 'None,'
+                continue
+            result += str(node.val) + ','
+            q.append(node.left)
+            q.append(node.right)
+
+        return result
+
+    def deserialize(self, data):
+        if not data:
+            return None
+        ls = data.split(',')
+        root = TreeNode(int(ls[0]))
+        q = collections.deque()
+        q.append(root)
+        i = 1
+        while q and i < len(ls):
+            node = q.popleft()
+            if ls[i] != 'None':
+                left = TreeNode(int(ls[i]))
+                node.left = left
+                q.append(left)
+            i += 1
+            if ls[i] != 'None':
+                right = TreeNode(int(ls[i]))
+                node.right = right
+                q.append(right)
+            i += 1
+        return root
+
+# dfs
+import collections
+class Codec:
+
+    def serialize(self, root):
+        def rserialize(root, string):
+            if root is None:
+                string += 'None,'
+            else:
+                string += str(root.val) + ','
+                string = rserialize(root.left, string)
+                string = rserialize(root.right, string)
+            return string
+
+        return rserialize(root, '')
+
+    def deserialize(self, data):
+        def rdeserialize(l):
+            if l[0] == 'None':
+                l.pop(0)
+                return None
+
+            root = TreeNode(l[0])
+            l.pop(0)
+            root.left = rdeserialize(l)
+            root.right = rdeserialize(l)
+            return root
+
+        data_list = data.split(',')
+        root = rdeserialize(data_list)
+        return root
