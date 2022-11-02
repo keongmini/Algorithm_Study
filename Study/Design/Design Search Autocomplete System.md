@@ -38,60 +38,61 @@
     ```
   
 * Solution 풀이  
-  참고. [disscussion python solution comment](https://leetcode.com/problems/design-search-autocomplete-system/discuss/105386/Python-Clean-Solution-Using-Trie)
+  - Trie   
+    참고. [disscussion python solution comment](https://leetcode.com/problems/design-search-autocomplete-system/discuss/105386/Python-Clean-Solution-Using-Trie)
   
-  1. 주어진 문장들로 Trie 생성
-  1. 현재 prefix 기준으로 Trie에서 일치하는 문장 찾기
-  1. hot degree 기준으로 정렬 - 같을 경우 문장의 글자 크기 순서대로 연결(ASCII코드 순서 = 알파벳 정렬 순서)
-  1. '#' 입력시 현재까지 prefix를 Trie에 추가
-    
-  **시간복잡도 Trie 생성: O(N * M), Input: O(N)**
-  
-  ```python
-    class Trie:
-        def __init__(self):
-            self.node = {}
-            self.words = []
-    
-    class AutocompleteSystem:
-        def __init__(self, sentences, times):
-            self.trie = Trie()
-            self.cache_count = {}
-            self.keyword = ""
-            for i, sen in enumerate(sentences):
-                self._add_word(sen, self.trie)
-                self.cache_count[sen] = times[i]
-    
-        def _add_word(self, word, trie):            # Trie 생성
-            for char in word:
-                if char not in trie.node:
-                    trie.node[char] = Trie()
-                trie = trie.node[char]
-                trie.words.append(word)
-            return True
-    
-        def _find_words(self, word):
-            trie = self.trie
-            for char in word:
-                if char in trie.node:
-                    trie = trie.node[char]
-                else:
-                    return []
-            return trie.words
-    
-        def input(self, c):
-            if c != '#':
-                self.keyword = self.keyword + c
-                words = self._find_words(self.keyword)
-                res = []
-                for word in words:
-                    res.append((self.cache_count[word], word))
-                res = list(set(res))
-                return [s[1] for s in sorted(res, key=lambda x: (-x[0], x[1]))[:3]]
-            else:
-                self.cache_count[self.keyword] = self.cache_count.get(self.keyword,0) +1
-                self._add_word(self.keyword,self.trie)
+      1. 주어진 문장들로 Trie 생성
+      1. 현재 prefix 기준으로 Trie에서 일치하는 문장 찾기
+      1. hot degree 기준으로 정렬 - 같을 경우 문장의 글자 크기 순서대로 연결(ASCII코드 순서 = 알파벳 정렬 순서)
+      1. '#' 입력시 현재까지 prefix를 Trie에 추가
+        
+      **시간복잡도 Trie 생성: O(N * M), Input: O(N)**
+      
+      ```python
+        class Trie:
+            def __init__(self):
+                self.node = {}
+                self.words = []
+        
+        class AutocompleteSystem:
+            def __init__(self, sentences, times):
+                self.trie = Trie()
+                self.cache_count = {}
                 self.keyword = ""
-                
-            return []
-    ```
+                for i, sen in enumerate(sentences):
+                    self._add_word(sen, self.trie)
+                    self.cache_count[sen] = times[i]
+        
+            def _add_word(self, word, trie):            # Trie 생성
+                for char in word:
+                    if char not in trie.node:
+                        trie.node[char] = Trie()
+                    trie = trie.node[char]
+                    trie.words.append(word)
+                return True
+        
+            def _find_words(self, word):
+                trie = self.trie
+                for char in word:
+                    if char in trie.node:
+                        trie = trie.node[char]
+                    else:
+                        return []
+                return trie.words
+        
+            def input(self, c):
+                if c != '#':
+                    self.keyword = self.keyword + c
+                    words = self._find_words(self.keyword)
+                    res = []
+                    for word in words:
+                        res.append((self.cache_count[word], word))
+                    res = list(set(res))
+                    return [s[1] for s in sorted(res, key=lambda x: (-x[0], x[1]))[:3]]
+                else:
+                    self.cache_count[self.keyword] = self.cache_count.get(self.keyword,0) +1
+                    self._add_word(self.keyword,self.trie)
+                    self.keyword = ""
+                    
+                return []
+        ```
