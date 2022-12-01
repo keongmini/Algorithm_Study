@@ -42,17 +42,19 @@
                 nums.reverse()
                 return
             
-            k = i - 1       # 다음 순열에 필요한 값 
+            k = i - 1       # 다음 순열에 필요한 값
             
-            while nums[j] <= nums[k]:       # 변경해줄 값 
+            # 여기까지 진행할 경우, k 아래의 숫자들은 내림차순이라는 보장이 생김
+            
+            while nums[j] <= nums[k]:       # k 아래 내림차순으로 되어있는 숫자중 k와 가장 가깝게 큰 값 찾기 - 자리 변경해줄 값
                 j -= 1
                 
             nums[k], nums[j] = nums[j], nums[k]  
-            l, r = k+1, len(nums)-1
+            l, r = k + 1, len(nums) - 1
             
             while l < r:        # 오름차순 -> 내림차순으로 바꾸기 
                 nums[l], nums[r] = nums[r], nums[l]
-                l +=1
+                l += 1
                 r -= 1
     ```
   - 이분탐색  
