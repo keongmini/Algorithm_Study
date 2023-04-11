@@ -36,6 +36,7 @@ int main(){
         else right = mid - 1;
     }
     cout<<result;
+    delete[] location;
 
     return 0;
 }
