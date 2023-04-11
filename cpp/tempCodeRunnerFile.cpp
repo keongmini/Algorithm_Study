@@ -1,0 +1,1 @@
+int stack[100], top=-1;
