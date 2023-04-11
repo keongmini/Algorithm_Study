@@ -19,16 +19,17 @@ int Count(int s){
     return cnt;
 }
 int main(){
-    int m, i, left=1, right=0, mid, result;
+    int m, i, left=1, right=0, mid, result, max=-2147000000;
     cin>>n>>m;
     for(i=1;i<=n;i++){
         cin>>a[i];
         right+=a[i];
+        if(a[i]> max) max = a[i];
     }
 
     while(left<=right){
         mid = (left+right) / 2;
-        if(Count(mid) <= m){
+        if(mid>=max && Count(mid) <= m){
             result = mid;
             right = mid - 1;
         }else {
