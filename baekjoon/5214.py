@@ -1,6 +1,8 @@
 # bfs 풀이 - 통과
 # 역만 거치는 bfs 말고 연결관계(하이퍼튜브) 고려해야함
 
+# 참고 https://chldkato.tistory.com/57
+
 from collections import deque
 import sys
 
