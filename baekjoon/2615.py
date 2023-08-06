@@ -16,13 +16,13 @@ for i in range(19):
                 ni = i
                 nj = j
 
-                while 0 <= ni < 19 and 0 <= nj < 19 and graph[ni][nj] == now:
+                while 0 <= ni < 19 and 0 <= nj < 19 and graph[ni][nj] == now:       # 한쪽으로만 이어지기 때문에 한쪽으로 이동
                     length += 1
                     ni += a
                     nj += b
 
                 if length == 5:
-                    prev_i = i - a
+                    prev_i = i - a          # 이전에 이어지는 부분 없는지 체크 - 이어지면 오목 x
                     prev_j = j - b
 
                     if 0 <= prev_i < 19 and 0 <= prev_j < 19 and graph[prev_i][prev_j] == now:
