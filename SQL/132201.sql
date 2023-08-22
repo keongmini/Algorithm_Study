@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT PT_NAME, PT_NO, GEND_CD, AGE, IFNULL(TLNO, 'NONE') AS TLNO
+-- 특정 조건일 때 특정 단어로 출력
+FROM PATIENT
+WHERE GEND_CD = 'W'
+AND AGE <= 12
+ORDER BY AGE desc, PT_NAME;
