@@ -1,0 +1,4 @@
+-- 코드를 입력하세요
+SELECT COUNT(DISTINCT NAME)
+FROM ANIMAL_INS
+-- DISTINCT - 중복제거, NULL 제거
