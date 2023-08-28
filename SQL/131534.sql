@@ -1,0 +1,16 @@
+-- 코드를 입력하세요
+SELECT
+    YEAR(SALES_DATE) AS YEAR,
+    -- 년도 구하기
+    MONTH(SALES_DATE) AS MONTH,
+    -- 월 구하기
+    COUNT(DISTINCT USER_ID) AS PUCHASED_USERS,
+    -- 구매한 사람이 수 -> 한사람이 여러번 구매한건 포함하지 않음 = distinct 사용
+    ROUND(COUNT(DISTINCT USER_ID) / (SELECT COUNT(*) FROM USER_INFO WHERE YEAR(JOINED) = 2021), 1) AS PUCHASED_RATIO
+    -- 2021에 가입한 사람 회원수 찾기
+FROM ONLINE_SALE
+WHERE USER_ID in 
+    (SELECT USER_ID FROM USER_INFO WHERE YEAR(JOINED) = 2021)
+    -- 서브쿼리로 2021에 가입한 회원 찾기
+GROUP BY YEAR, MONTH
+ORDER BY YEAR, MONTH
