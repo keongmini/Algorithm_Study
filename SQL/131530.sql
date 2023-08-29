@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT TRUNCATE(PRICE, -4) AS PRICE_GROUP, COUNT(*) AS PRODUCTS
+-- TRUNCATE 사용 - TRUNCATE(18800, -4) => 10000
+-- 참고 https://www.w3schools.com/sql/func_mysql_truncate.asp
+FROM PRODUCT
+GROUP BY PRICE_GROUP
+ORDER BY PRICE_GROUP
