@@ -93,7 +93,7 @@ for i in range(N):
             if 0 <= i - 1 < N and 0 <= i + 1 < N:       # 범위 안에 들어오는지
                 if graph[i - 1][j] == 'L' and graph[i + 1][j] == 'L':       # 위아래가 육지가 아닌지
                     continue
-            if 0 <= j - 1 < N and 0 <= j + 1 < M:
+            if 0 <= j - 1 < M and 0 <= j + 1 < M:
                 if graph[i][j - 1] == 'L' and graph[i][j + 1] == 'L':       # 양옆이 육지가 아닌지
                     continue
             result = max(result, bfs(i, j))
