@@ -1,3 +1,5 @@
+# 참고 https://leetcode.com/problems/zigzag-conversion/solutions/3416918/easy-solution-with-full-explanation-on-kotlin/
+
 class Solution {
     fun convert(s: String, numRows: Int): String {
         if(numRows == 1){
